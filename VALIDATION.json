@@ -1,0 +1,36 @@
+{
+  "version": "0.1.0",
+  "tests": {
+    "tests": 26,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "test_runtime": "PyTorch 2.14.1 CPU, macOS arm64",
+  "full_depth_test_width": 32,
+  "production_width": 512,
+  "checkpoint_tensor_names_and_shapes_verified": 322,
+  "checkpoint_parameter_count": 345280216,
+  "other_workflow_widgets_and_edges_preserved": true,
+  "offline_workflow_errors": 0,
+  "offline_workflow_warnings": 0,
+  "gpu_render_tested": false,
+  "installed_on_user_gpu_backend": false,
+  "scope": "Temporal-boundary repair; not a verified fix for the entire bright-grid failure.",
+  "workflow_sha256": "2fa37d852786f0ca60c9b1a3ebc598ab58a6875560b8d27519e2d1c5d83aa1ec",
+  "files_sha256": {
+    "LICENSE": "86805fe49f63c8957e4427f7e7f26fba687c6cea05fa9249bf36f9d3316a0734",
+    "NOTICE.md": "19df89676ff072d86b1f566c3a6b1a79e104dcfd0fe661d068e1d488842ead11",
+    "README.md": "6e0c63c1b8dcc3c288213dcdc6ebb2be6014a219fdded0c20af1d3cc877742fa",
+    "__init__.py": "3a61c33719e0a3b0cb1ee490173568e007b07b2091fbe154a1f04f5262495c9e",
+    "core.py": "9b5637dfe47dd9bf6d1bff73df5a7ceeb52f95e29f26421bf664274f8f4a59c1",
+    "docs/MODAL.md": "8e88c58d0ee4619bd5f505911188364a6c9875a847e47a43ac854441ffcb7049",
+    "node.py": "95d264ec5cfc8a1bb8a358c2409f50668bf0a42998f6ebac51d966f8a7bd5824",
+    "pytest.ini": "bc912efbf7cf5d1ddb5afeb218f878399eb626b17fe75c25220987b31641c22c",
+    "tests/conftest.py": "67419a36cc40b284b3d4144336e005bb2966d8f38b132ebadbaf2600d4c6ea8d",
+    "tests/fixtures/v1-bf16-header.json": "d3fc343b0c36bf12bfe436e8035fbc217ffa9bfa2b5d6d2080a7e6fb455398bd",
+    "tests/test_circular.py": "b8f8fecdc6976641c1852fc018cda62c74746408aa3fcfd7c06326a0d686d5aa",
+    "tests/test_node.py": "b7f4a95b033f4fc6d0d41dca17e4a3b2ec84cd92ad31faace2c1e7be915e39cd",
+    "workflows/MiniMax-H3-2.1-Circular-Latent-Upscale.json": "2fa37d852786f0ca60c9b1a3ebc598ab58a6875560b8d27519e2d1c5d83aa1ec"
+  }
+}
