@@ -1,0 +1,128 @@
+{
+  "source": "workflows/sources/LOOP-v1.0-8step_lora.json",
+  "original_nodes": 44,
+  "new_nodes": 55,
+  "retained_original_nodes": 43,
+  "original_node_layout_and_modes_preserved": true,
+  "original_non_note_widgets_preserved_except_final_prefix": true,
+  "subgraphs_unchanged": true,
+  "preview_count": 1,
+  "gpu_render_tested": false,
+  "presets": {
+    "3step": [
+      0.909375,
+      0.8571428571428571,
+      0.6666666666666666,
+      0.0
+    ],
+    "2step-gentler": [
+      0.7,
+      0.49411764705882344,
+      0.0
+    ],
+    "3step-start080": [
+      0.8,
+      0.6857142857142858,
+      0.4800000000000001,
+      0.0
+    ],
+    "4step-shift6": [
+      0.909375,
+      0.8414457831325303,
+      0.7320754716981133,
+      0.5266968325791855,
+      0.0
+    ]
+  },
+  "validation": {
+    "3step": {
+      "workflow": "workflows/LOOP-v1.1-Regenerate-3step.json",
+      "valid": true,
+      "error_count": 0,
+      "warning_count": 0,
+      "errors": [],
+      "warnings": [],
+      "partner_nodes": [
+        "GeminiNanoBanana2V2",
+        "GeminiNodeV3",
+        "MinimaxHailuo03ContextIRNode"
+      ],
+      "spends_credits": true,
+      "object_info_source": {
+        "mode": "offline",
+        "basis": "published schemas, existing pinned preview schema, and user model/image filename overlay"
+      },
+      "converted_from_ui": true,
+      "converted_node_count": 48,
+      "sha256": "9ecb2c0b5f1b3375ad7222dffaf0d81acde44dd094f0fd20d9c159d6c8f3df7d"
+    },
+    "2step-gentler": {
+      "workflow": "workflows/LOOP-v1.1-Regenerate-2step-gentler.json",
+      "valid": true,
+      "error_count": 0,
+      "warning_count": 0,
+      "errors": [],
+      "warnings": [],
+      "partner_nodes": [
+        "GeminiNanoBanana2V2",
+        "GeminiNodeV3",
+        "MinimaxHailuo03ContextIRNode"
+      ],
+      "spends_credits": true,
+      "object_info_source": {
+        "mode": "offline",
+        "basis": "published schemas, existing pinned preview schema, and user model/image filename overlay"
+      },
+      "converted_from_ui": true,
+      "converted_node_count": 48,
+      "sha256": "60428883598a1cc7fc23b21203aee8e7a0ef874b58a85c595465573ae6e8c385"
+    },
+    "3step-start080": {
+      "workflow": "workflows/LOOP-v1.1-Regenerate-3step-start080.json",
+      "valid": true,
+      "error_count": 0,
+      "warning_count": 0,
+      "errors": [],
+      "warnings": [],
+      "partner_nodes": [
+        "GeminiNanoBanana2V2",
+        "GeminiNodeV3",
+        "MinimaxHailuo03ContextIRNode"
+      ],
+      "spends_credits": true,
+      "object_info_source": {
+        "mode": "offline",
+        "basis": "published schemas, existing pinned preview schema, and user model/image filename overlay"
+      },
+      "converted_from_ui": true,
+      "converted_node_count": 48,
+      "sha256": "96abbb72e102281cc0f8c75505c673a971395b1474722d8a51523ea9a99040fe"
+    },
+    "4step-shift6": {
+      "workflow": "workflows/LOOP-v1.1-Regenerate-4step-shift6.json",
+      "valid": true,
+      "error_count": 0,
+      "warning_count": 0,
+      "errors": [],
+      "warnings": [],
+      "partner_nodes": [
+        "GeminiNanoBanana2V2",
+        "GeminiNodeV3",
+        "MinimaxHailuo03ContextIRNode"
+      ],
+      "spends_credits": true,
+      "object_info_source": {
+        "mode": "offline",
+        "basis": "published schemas, existing pinned preview schema, and user model/image filename overlay"
+      },
+      "converted_from_ui": true,
+      "converted_node_count": 48,
+      "sha256": "c8ee95a4782f763bd8abfafc394c287987dbba554e037c4fb452533129e6bf67"
+    }
+  },
+  "repository_tests": {
+    "passed": 37,
+    "gpu_render_tested": false
+  },
+  "prior_regenerate_workflow_user_report": "works, reported 2026-10-28"
+}

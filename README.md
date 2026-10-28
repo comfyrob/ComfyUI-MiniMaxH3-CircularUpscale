@@ -11,6 +11,14 @@ This is an independent derivative, with upstream attribution in `NOTICE.md`.
 
 ## Regenerate loop refinement experiment
 
+The latest revision is
+[`LOOP-v1.1-Regenerate-3step.json`](workflows/LOOP-v1.1-Regenerate-3step.json),
+built directly on Rob's attached LOOP v1.0 workflow. It preserves the original
+layout, settings, prompt subgraphs and output branches, restores native node
+names, and adds no refinement preview. [Four sigma presets and the audio
+explanation](docs/LOOP-v1.1.md) accompany it. Rob reported the preceding
+Regenerate test working; the v1.1 layout revision has been checked offline.
+
 The `codex/regenerate-loop-refinement` branch adds
 [`MiniMax-H3-Regenerate-Loop-Refinement-3Step.json`](workflows/MiniMax-H3-Regenerate-Loop-Refinement-3Step.json).
 It feeds the existing circular upscale into a separate FL2VA + Turbo v1.2 +
