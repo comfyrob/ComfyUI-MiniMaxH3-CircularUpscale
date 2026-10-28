@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "gpu_render_tested": false,
+  "test_doubles": [
+    "transformer temporal filter",
+    "audio/video VAEs",
+    "Comfy host facade"
+  ],
+  "checks": [
+    "model clone isolation",
+    "encoded nonzero silence with zero noise mask",
+    "automatic audio duration at five loop lengths",
+    "fresh padding noise at each sigma",
+    "end/start context on every 3-step and 2-step model call",
+    "predicted tail rebuild",
+    "Loop Decode ignores poisoned tail and returns 153 frames"
+  ],
+  "sampling_calls": [
+    [
+      {
+        "sigma": 0.909375011920929,
+        "video_context_T": 67,
+        "audio_context_T": 377
+      },
+      {
+        "sigma": 0.8571428656578064,
+        "video_context_T": 67,
+        "audio_context_T": 377
+      },
+      {
+        "sigma": 0.6666666865348816,
+        "video_context_T": 67,
+        "audio_context_T": 377
+      }
+    ],
+    [
+      {
+        "sigma": 0.699999988079071,
+        "video_context_T": 67,
+        "audio_context_T": 377
+      },
+      {
+        "sigma": 0.4941176474094391,
+        "video_context_T": 67,
+        "audio_context_T": 377
+      }
+    ]
+  ],
+  "tested_audio_lengths": [
+    37,
+    178,
+    263,
+    348,
+    603
+  ],
+  "sources": {
+    "loop-modal-pin.py": {
+      "url": "https://raw.githubusercontent.com/pxl-pshr/ComfyUI-MiniMaxH3-Loop/733647e/__init__.py",
+      "sha256": "4e67b9336a74e25b346999ff8bcd52ecadf24ce89a726c97464ecdc251dbf707"
+    },
+    "comfy-nodes-audio.py": {
+      "url": "https://raw.githubusercontent.com/Comfy-Org/ComfyUI/426f5ee/comfy_extras/nodes_audio.py",
+      "sha256": "483466af050a43bf96f9fcdfa56ab2759dbf8611dd6a14a9543f6d136ecbdf43"
+    },
+    "comfy-nodes-ltxv.py": {
+      "url": "https://raw.githubusercontent.com/Comfy-Org/ComfyUI/426f5ee/comfy_extras/nodes_lt.py",
+      "sha256": "09ddb30d42244d64ae72e9c64261d1a6b4c512afe0570372222c43dbebd64243"
+    },
+    "comfy-sigmas.py": {
+      "url": "https://raw.githubusercontent.com/Comfy-Org/ComfyUI/426f5ee/comfy_extras/nodes_custom_sampler.py",
+      "sha256": "b0ba1521c72475e06fed15db004274ed7c8bb2bf73f1d58849faf6f9f9d264fe"
+    }
+  }
+}

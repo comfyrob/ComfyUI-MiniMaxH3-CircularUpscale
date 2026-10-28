@@ -1,0 +1,73 @@
+{
+  "scope": "Regenerate + Turbo refinement through the existing H3 Loop wrapper; Sharp omitted",
+  "workflow": "workflows/MiniMax-H3-Regenerate-Loop-Refinement-3Step.json",
+  "workflow_sha256": "25613576c0f02fcd663036bfe8c4027d2d8ad73ca5c63aa135e2d2891e5070ac",
+  "circular_upscaler_runtime": "unchanged from v0.1.0 (08fb7b5)",
+  "graph": {
+    "valid": true,
+    "errors": 0,
+    "warnings": 0,
+    "catalog": "offline published schemas + verified model filenames; target inventory not checked"
+  },
+  "repository_tests": {
+    "passed": 30
+  },
+  "cpu_integration_report": "experiments/regenerate-loop-cpu.json",
+  "adapter_shapes": {
+    "turbo": {
+      "paired_modules": 208,
+      "mismatches": [],
+      "metadata": {
+        "training_scale": "0.0625",
+        "qkv_fusion": "block diagonal B; concat A; alpha multiplied by 3",
+        "swi_glu_mapping": "Diffusers [value;gate] -> ComfyUI [gate;value]",
+        "training_rank": "128",
+        "target_format": "ComfyUI generic LoRA",
+        "source_format": "Diffusers PEFT LoRA",
+        "format": "pt",
+        "base_model": "Comfy-Org/MiniMax-H3 minimax_h3_fl2va_bf16.safetensors",
+        "training_alpha": "8.0"
+      }
+    },
+    "refiner": {
+      "paired_modules": 208,
+      "mismatches": [],
+      "metadata": {
+        "format": "pt",
+        "split": "refiner ranks 0:384 of the rank-576 merge (refiner|turbo|sharp); alpha == rank, strength folded",
+        "source": "Efficient-Large-Model/Open-H3-Regenerate-2K lora/open_h3_regenerate_2k_lora.safetensors",
+        "converted_layout": "comfyui_minimax_h3",
+        "baked_scale": "1.0",
+        "conversion": "qkv block-diag fused (contiguous q|k|v); mlp.fc1 swiglu halves swapped; alpha folded into lora_B; scale 1.0 baked as a flat multiplier"
+      }
+    }
+  },
+  "adaln_tables": [
+    {
+      "variant": "fl2va",
+      "shape": [
+        1025,
+        8
+      ],
+      "dtype": "F32",
+      "table_sha256": "ac8727cdec52137c73878d004de5bd2a0e19227e8311e29ab3b68f328310e34e",
+      "header_bytes": 95416
+    },
+    {
+      "variant": "ref2va",
+      "shape": [
+        1025,
+        8
+      ],
+      "dtype": "F32",
+      "table_sha256": "c02a6c11888297688c1e6278185ea1f947023acfc69f9003bbcdcec9a229a8e7",
+      "header_bytes": 95416
+    }
+  ],
+  "gpu_render_tested": false,
+  "limitations": [
+    "Sharp adapter omitted; not the complete NVIDIA recipe",
+    "No trained-model refinement or final video seam verified",
+    "No checkpoint weights downloaded or backend deployed"
+  ]
+}

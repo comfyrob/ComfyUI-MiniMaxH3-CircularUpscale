@@ -9,6 +9,21 @@ Private development repository:
 For the existing Modal deployment, see [the Modal installation guide](docs/MODAL.md).
 This is an independent derivative, with upstream attribution in `NOTICE.md`.
 
+## Regenerate loop refinement experiment
+
+The `codex/regenerate-loop-refinement` branch adds
+[`MiniMax-H3-Regenerate-Loop-Refinement-3Step.json`](workflows/MiniMax-H3-Regenerate-Loop-Refinement-3Step.json).
+It feeds the existing circular upscale into a separate FL2VA + Turbo v1.2 +
+Regenerate model branch, with **MiniMax H3 Loop applied during every refinement
+step**, then Loop Decode. The circular upscaler runtime is unchanged from v0.1.0;
+the workflow does not use the Context Pad/Restore experiment.
+
+This is a refiner + Turbo test, with Sharp intentionally omitted because its
+REF2VA timestep basis differs from the FL2VA checkpoint. Read
+[the setup, model links, and validation limits](docs/REGENERATE-LOOP.md) before
+running it. The graph and CPU wrapper checks pass; visual loop quality still
+requires a GPU render.
+
 ## Install and use
 
 For an authenticated GitHub checkout, clone directly into your backend's
