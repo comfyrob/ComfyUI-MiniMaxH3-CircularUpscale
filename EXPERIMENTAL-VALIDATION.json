@@ -1,0 +1,73 @@
+{
+  "status": "local experimental prototype, not an upstream release",
+  "base": "v0.1.0",
+  "branch": "codex/loop-context-experiment",
+  "tests": {
+    "tests": 40,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "offline_workflow_errors": 0,
+  "offline_workflow_warnings": 0,
+  "original_core_and_upscaler_node_unchanged": true,
+  "stock_node_cpu_smoke": {
+    "source_sha256": "744063b43e0f3eec23e2485cb7c65503069946ca9690906ecb548d7515cb89e2",
+    "stock_execute_ran": true,
+    "host": "shim, not a running ComfyUI server",
+    "weights": "synthetic, full depth, 32 channels",
+    "device": "cpu",
+    "padded_shape": [
+      1,
+      24,
+      77,
+      2,
+      3
+    ],
+    "processed_shape": [
+      1,
+      24,
+      77,
+      4,
+      6
+    ],
+    "restored_shape": [
+      1,
+      24,
+      47,
+      4,
+      6
+    ],
+    "input_unchanged": true,
+    "weights_unchanged": true,
+    "stock_convs_unchanged": true,
+    "canonical_tail": true,
+    "stock_vs_control_max_abs_error": 0.0,
+    "gpu_render_tested": false
+  },
+  "gpu_render_tested": false,
+  "known_limit": "External padding reduces but does not eliminate boundary effects; GroupNorm remains global.",
+  "files_sha256": {
+    "LICENSE": "86805fe49f63c8957e4427f7e7f26fba687c6cea05fa9249bf36f9d3316a0734",
+    "NOTICE.md": "19df89676ff072d86b1f566c3a6b1a79e104dcfd0fe661d068e1d488842ead11",
+    "README.md": "a2554c186a560d86a245513f28f0b47294ae02ff1c0082b52937b0924d4b92ad",
+    "__init__.py": "ac2aefd28d23c2999fb3e32161047cd4417a6ff4955ac22ad8e64d80bf616e88",
+    "context.py": "c62c3147259a647cdb430b06ef7560a3fe8caf9cd7c4ddd5685adee99cc36378",
+    "core.py": "9b5637dfe47dd9bf6d1bff73df5a7ceeb52f95e29f26421bf664274f8f4a59c1",
+    "docs/LOOP-CONTEXT.md": "fd6dcfb318b781f98f7df81a945f7fffb3a31bdb2aa608519ff6e584e1ed2ca7",
+    "docs/MODAL.md": "8e88c58d0ee4619bd5f505911188364a6c9875a847e47a43ac854441ffcb7049",
+    "experiments/context-results.json": "c51276bb3abb4a524c94a808947589c3ccda27854a22c939a8c995d917d799ce",
+    "experiments/context_boundary.py": "a94665383217a9fd78221103db0b83164b617d3b442aa116a8a9058c1070a629",
+    "experiments/stock-node-results.json": "611a3d6869b1040fc0efa80932f513bac9e4e755dce0960015a27819a9a18a8d",
+    "experiments/stock_node_smoke.py": "de39070a5e216041c56945f5d40a6439b3501ec35b98874a82978bd8c855ac17",
+    "node.py": "95d264ec5cfc8a1bb8a358c2409f50668bf0a42998f6ebac51d966f8a7bd5824",
+    "pytest.ini": "bc912efbf7cf5d1ddb5afeb218f878399eb626b17fe75c25220987b31641c22c",
+    "tests/conftest.py": "67419a36cc40b284b3d4144336e005bb2966d8f38b132ebadbaf2600d4c6ea8d",
+    "tests/fixtures/v1-bf16-header.json": "d3fc343b0c36bf12bfe436e8035fbc217ffa9bfa2b5d6d2080a7e6fb455398bd",
+    "tests/test_circular.py": "b8f8fecdc6976641c1852fc018cda62c74746408aa3fcfd7c06326a0d686d5aa",
+    "tests/test_context.py": "f050a3bde3f8e889891e59dcd13dd358998742a3438a2fd7e7065f715c64456c",
+    "tests/test_node.py": "b7f4a95b033f4fc6d0d41dca17e4a3b2ec84cd92ad31faace2c1e7be915e39cd",
+    "workflows/MiniMax-H3-2.1-Circular-Latent-Upscale.json": "2fa37d852786f0ca60c9b1a3ebc598ab58a6875560b8d27519e2d1c5d83aa1ec",
+    "workflows/MiniMax-H3-Loop-Context-Experimental-LBH.json": "693381f585095922ec96b899e437bd776b3fbee699027233e790fc841df98d04"
+  }
+}

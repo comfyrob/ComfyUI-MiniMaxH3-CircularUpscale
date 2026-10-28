@@ -1,0 +1,34 @@
+{
+  "source_sha256": "744063b43e0f3eec23e2485cb7c65503069946ca9690906ecb548d7515cb89e2",
+  "stock_execute_ran": true,
+  "host": "shim, not a running ComfyUI server",
+  "weights": "synthetic, full depth, 32 channels",
+  "device": "cpu",
+  "padded_shape": [
+    1,
+    24,
+    77,
+    2,
+    3
+  ],
+  "processed_shape": [
+    1,
+    24,
+    77,
+    4,
+    6
+  ],
+  "restored_shape": [
+    1,
+    24,
+    47,
+    4,
+    6
+  ],
+  "input_unchanged": true,
+  "weights_unchanged": true,
+  "stock_convs_unchanged": true,
+  "canonical_tail": true,
+  "stock_vs_control_max_abs_error": 0.0,
+  "gpu_render_tested": false
+}

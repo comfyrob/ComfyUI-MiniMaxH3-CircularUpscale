@@ -9,6 +9,11 @@ Private development repository:
 For the existing Modal deployment, see [the Modal installation guide](docs/MODAL.md).
 This is an independent derivative, with upstream attribution in `NOTICE.md`.
 
+Local experimental branch: two additional **Loop Context Pad / Restore** nodes
+can bracket an external H3 video-latent processor. They do not change the
+existing circular upscaler. See [the experiment and wiring](docs/LOOP-CONTEXT.md)
+for the stock LBH test, measured limitations, and the separate Regenerate path.
+
 ## Install and use
 
 For an authenticated GitHub checkout, clone directly into your backend's
@@ -78,12 +83,12 @@ with reduced channels, show the stock zero-padded control fails that property,
 check every released checkpoint parameter name/shape, exercise tail handling,
 spatial padding, input validation, cancellation and a ComfyUI host shim.
 
-**This is a tested boundary-condition repair, not a verified cure for the
-magenta grid/bright flash.** There has been no complete H3 generation with the
-trained upscaler and the user's INT8 VAE here. The runtime tests use CPU tensors
-and reduced-width networks; checkpoint compatibility is checked against the
-published full-size tensor header. The user's installed backend is not available
-in this workspace.
+The user reported that the original circular-upscaler workflow worked on their
+GPU backend. Local automated validation uses CPU tensors and reduced-width
+networks; checkpoint compatibility is checked against the published full-size
+tensor header. That user report is not a controlled comparison establishing a
+universal cure for grid/flash artifacts. The new Pad/Restore experiment and
+Regenerate combination have not had a full trained-checkpoint GPU render here.
 
 Changing the trained network's temporal boundary conditions can affect picture
 quality. The v1 normalization convention is preserved because the public

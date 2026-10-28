@@ -1,0 +1,53 @@
+{
+  "torch": "2.14.1",
+  "device": "cpu",
+  "dtype": "float32",
+  "seed": 813,
+  "body_latents": 45,
+  "spatial_scale": 2,
+  "channels_tested": 32,
+  "production_channels": 512,
+  "weights": "synthetic; identical across circular and stock controls",
+  "temporal_chunking": false,
+  "circular_rotation_max_abs_error": 2.5257468223571777e-06,
+  "rows": [
+    {
+      "pad_clips": 0,
+      "input_latents": 47,
+      "rotation_max_abs_error": 1.062738299369812,
+      "relative_rmse_vs_circular": 0.263977587223053
+    },
+    {
+      "pad_clips": 1,
+      "input_latents": 57,
+      "rotation_max_abs_error": 0.4779694676399231,
+      "relative_rmse_vs_circular": 0.12321090698242188
+    },
+    {
+      "pad_clips": 3,
+      "input_latents": 77,
+      "rotation_max_abs_error": 0.09864646196365356,
+      "relative_rmse_vs_circular": 0.08854338526725769
+    },
+    {
+      "pad_clips": 15,
+      "input_latents": 197,
+      "rotation_max_abs_error": 0.04351067543029785,
+      "relative_rmse_vs_circular": 0.031415168195962906
+    },
+    {
+      "pad_clips": 27,
+      "input_latents": 317,
+      "rotation_max_abs_error": 0.016515254974365234,
+      "relative_rmse_vs_circular": 0.011624145321547985
+    },
+    {
+      "pad_clips": 45,
+      "input_latents": 497,
+      "rotation_max_abs_error": 0.010479211807250977,
+      "relative_rmse_vs_circular": 0.007370660547167063
+    }
+  ],
+  "interpretation": "External context reduces but does not eliminate origin dependence. Do not infer trained-model quality or Regenerate compatibility from these numbers.",
+  "gpu_render_tested": false
+}
