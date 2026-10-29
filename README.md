@@ -12,12 +12,14 @@ This is an independent derivative, with upstream attribution in `NOTICE.md`.
 ## Regenerate loop refinement experiment
 
 The latest revision is
-[`LOOP-v1.1-Regenerate-3step.json`](workflows/LOOP-v1.1-Regenerate-3step.json),
-built directly on Rob's attached LOOP v1.0 workflow. It preserves the original
-layout, settings, prompt subgraphs and output branches, restores native node
-names, and adds no refinement preview. [Four sigma presets and the audio
-explanation](docs/LOOP-v1.1.md) accompany it. Rob reported the preceding
-Regenerate test working; the v1.1 layout revision has been checked offline.
+[`LOOP-v1.2-Regenerate-Sigma-Selector.json`](workflows/LOOP-v1.2-Regenerate-Sigma-Selector.json).
+It organizes the working graph into stages and wires four Manual Sigmas nodes
+through one native **Branch** dropdown into the Regenerate sampler. It retains
+the generation settings, prompt subgraphs, audio and output branches, with native
+node names and no extra refinement preview. [Usage and validation limits](docs/LOOP-v1.2.md).
+The previous [v1.1 workflows and audio explanation](docs/LOOP-v1.1.md) remain
+available. Rob reported the preceding Regenerate test working; v1.2 has been
+checked offline.
 
 The `codex/regenerate-loop-refinement` branch adds
 [`MiniMax-H3-Regenerate-Loop-Refinement-3Step.json`](workflows/MiniMax-H3-Regenerate-Loop-Refinement-3Step.json).

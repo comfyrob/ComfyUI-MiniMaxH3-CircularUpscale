@@ -1,0 +1,82 @@
+{
+  "workflow": "LOOP-v1.2-Regenerate-Sigma-Selector.json",
+  "workflow_sha256": "1d0eaa682650cb776852f8ce44299cedf16541bab642ffe97008992dab864332",
+  "nodes": 59,
+  "tests": {
+    "passed": 40,
+    "failed": 0
+  },
+  "offline_validation": {
+    "workflow": "/Users/rob/Documents/ChatGPT/mac_wallpaper/workflows/LOOP-v1.2-Regenerate-Sigma-Selector.json",
+    "valid": true,
+    "error_count": 0,
+    "warning_count": 0,
+    "errors": [],
+    "warnings": [],
+    "partner_nodes": [
+      "GeminiNanoBanana2V2",
+      "GeminiNodeV3",
+      "MinimaxHailuo03ContextIRNode"
+    ],
+    "spends_credits": true,
+    "object_info_source": {
+      "mode": "file",
+      "path": "/Users/rob/Documents/ChatGPT/mac_wallpaper/research/regenerate-v3/object-info.json"
+    },
+    "converted_from_ui": true,
+    "converted_node_count": 52
+  },
+  "branch_check": {
+    "source_url": "https://github.com/Comfy-Org/ComfyUI/blob/master/comfy_extras/nodes_logic.py",
+    "source_sha256": "4bee84fe0d26922f1ee8243a62d740d9fd63432e0ff0e00d4110c8f59993439e",
+    "mode": "upstream Branch class with io annotation stub; saved API wiring and numeric schedules; no model execution",
+    "selections": [
+      {
+        "selection": "3 steps - default",
+        "requested_input": "autogrow.branch0",
+        "sigmas": [
+          0.909375,
+          0.8571428571428571,
+          0.6666666666666666,
+          0.0
+        ],
+        "passed": true
+      },
+      {
+        "selection": "3 steps - start 0.8",
+        "requested_input": "autogrow.branch1",
+        "sigmas": [
+          0.8,
+          0.6857142857142858,
+          0.4800000000000001,
+          0.0
+        ],
+        "passed": true
+      },
+      {
+        "selection": "2 steps - gentler",
+        "requested_input": "autogrow.branch2",
+        "sigmas": [
+          0.7,
+          0.4941176470588234,
+          0.0
+        ],
+        "passed": true
+      },
+      {
+        "selection": "4 steps - shift 6",
+        "requested_input": "autogrow.branch3",
+        "sigmas": [
+          0.909375,
+          0.8414457831325303,
+          0.7320754716981133,
+          0.5266968325791855,
+          0.0
+        ],
+        "passed": true
+      }
+    ]
+  },
+  "frontend_labels": "Verified against native connectedInputsFor and COMFY_BRANCH_SELECTOR source; UI reload not performed",
+  "gpu_render_tested": false
+}
