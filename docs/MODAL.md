@@ -13,7 +13,7 @@ access to this repository:
 ```sh
 mkdir -p vendor
 gh repo clone comfyrob/ComfyUI-MiniMaxH3-CircularUpscale vendor/ComfyUI-MiniMaxH3-CircularUpscale
-git -C vendor/ComfyUI-MiniMaxH3-CircularUpscale checkout --detach v0.1.0
+git -C vendor/ComfyUI-MiniMaxH3-CircularUpscale checkout codex/native-circular-upscale
 git -C vendor/ComfyUI-MiniMaxH3-CircularUpscale rev-parse HEAD
 ```
 
@@ -34,7 +34,10 @@ _h3_node_source = (
     Path(__file__).resolve().parent / "vendor" / "ComfyUI-MiniMaxH3-CircularUpscale"
 )
 _h3_node_target = "/comfyui/custom_nodes/comfyui_minimax_h3_circular_upscale"
-for _h3_file in ("__init__.py", "core.py", "node.py", "LICENSE", "NOTICE.md"):
+for _h3_file in (
+    "__init__.py", "core.py", "node.py", "native_backend.py", "native_node.py",
+    "LICENSE", "LICENSE-native-GPL-3.0.txt", "NOTICE.md",
+):
     image = image.add_local_file(
         str(_h3_node_source / _h3_file),
         f"{_h3_node_target}/{_h3_file}",
@@ -46,6 +49,12 @@ This deliberately copies only the runtime files and attribution, not Git
 metadata or local credentials. It adds layers after the existing image build.
 Editing these local node files causes Modal to include their new contents in
 the next build. No additional pip installation is needed.
+
+For an existing clone, fetch the remote branch before checking it out. This
+branch retains the original runtime and adds the native-backed node. A Modal
+configuration still copying only the original five files must be updated with
+the list above before rebuilding. The native node requires the ComfyUI native
+H3 upscaler and its matching dependencies; the original node does not.
 
 Keep the existing `ComfyUI-MiniMaxH3-Loop` pack. The original LBH upscaler can
 also remain installed; this node has a separate class name.

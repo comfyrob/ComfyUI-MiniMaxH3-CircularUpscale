@@ -9,6 +9,18 @@ Private development repository:
 For the existing Modal deployment, see [the Modal installation guide](docs/MODAL.md).
 This is an independent derivative, with upstream attribution in `NOTICE.md`.
 
+## Native model-loader integration (experimental)
+
+The additional **MiniMax H3 Circular Latent Upscale With Model** node accepts
+ComfyUI's **Load Latent Upscale Model** output. It combines native model
+management and sectioned execution with circular temporal context, body-only
+normalization and tail reconstruction. It also accepts joint AV latents, passing
+audio through unchanged. The original node and existing workflows are retained.
+
+[Wiring, requirements and validation](docs/NATIVE-CIRCULAR.md). **Modal users:**
+the explicit runtime-file copy list needs the two new Python files and native
+license file; see [the updated copy block](docs/MODAL.md).
+
 ## Regenerate loop refinement experiment
 
 The latest revision is

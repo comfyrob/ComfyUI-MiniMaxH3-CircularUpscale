@@ -1,0 +1,33 @@
+{
+  "comfyui_commit": "2c75dc1b379a59e0880619d029607af5169a62ef",
+  "torch": "2.14.1",
+  "comfy_kitchen": "0.2.40",
+  "device": "cpu",
+  "channels": 32,
+  "residual_blocks_per_stage": 12,
+  "weights": "seeded synthetic; no released checkpoint rendered",
+  "checks": [
+    {
+      "body_length": 5,
+      "batch": 1,
+      "max_reference_error": 5.245208740234375e-06,
+      "max_rotation_error": 4.5299530029296875e-06,
+      "input_weights_and_stock_output_unchanged": true
+    },
+    {
+      "body_length": 20,
+      "batch": 2,
+      "max_reference_error": 7.510185241699219e-06,
+      "max_rotation_error": 5.841255187988281e-06,
+      "input_weights_and_stock_output_unchanged": true
+    },
+    {
+      "body_length": 45,
+      "batch": 2,
+      "max_reference_error": 7.867813110351562e-06,
+      "max_rotation_error": 7.867813110351562e-06,
+      "input_weights_and_stock_output_unchanged": true
+    }
+  ],
+  "passed": true
+}
